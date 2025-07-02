@@ -412,11 +412,14 @@
         };
 
         try {
-          const response = await fetch("http://localhost:3001/api/pay", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(paymentData),
-          });
+          const response = await fetch(
+            "https://paytech-1.onrender.com/api/pay",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(paymentData),
+            }
+          );
 
           const data = await response.json();
 
